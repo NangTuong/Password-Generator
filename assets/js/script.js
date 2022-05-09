@@ -8,8 +8,21 @@ console.log(specialCharacters);
 
 // function for user password criteria
 var passwordCriteria = () => {
-  var passwordLength = window.prompt("How many characters would you like your password to have? Must be a value between 8 and 128.");
+  var passwordLength = parseInt(
+  window.prompt("How many characters would you like your password to have? Must be a value between 8 and 128.")
+  )
 
+//check to see if password is at least 8 characters
+if (passwordLength < 8) {
+  window.alert("Password length must be at least 8 characters.");
+  return;
+}
+
+//check to see if password is no more than 128 characters
+if (passwordLength > 128) {
+  window.alert("Password length must be no more than 128 characters.");
+  return;
+}
 }
 
 // Get references to the #generate element
