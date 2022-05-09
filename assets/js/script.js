@@ -7,7 +7,7 @@ var specialCharacters = ['@', '%', '+', '/', '!', '#', '$', '^', '?', ':', ',', 
 console.log(specialCharacters);
 
 // function for user password criteria
-var passwordCriteria = () => {
+var getPasswordCriteria = function() {
   var passwordLength = parseInt(
   window.prompt("How many characters would you like your password to have? Must be a value between 8 and 128.")
   )
@@ -23,25 +23,44 @@ if (passwordLength > 128) {
   window.alert("Password length must be no more than 128 characters.");
   return;
 }
-}
 
 //ask user if they would like to include lowercase characters
-var lowerCaseCharacters = function () {
+var lowerCaseCharacters =
   window.confirm("Would you like to use lowercase characters?");
-}
-//ask user if they would like to include uppercase characters
-var upperCaseCharacters = function () {
-  window.confirm("Would you like to use uppercase characters?");
-}
-//ask user if they would like to include numeric characters
-var numericCharacters = function () {
-  window.confirm("Would you like to use numeric characters?");
-}
-//ask user if they would like to include special characters
-var numericCharacters = function () {
-  window.confirm("Would you like to use special characters?");
-}
 
+//ask user if they would like to include uppercase characters
+var upperCaseCharacters =
+  window.confirm("Would you like to use uppercase characters?");
+
+//ask user if they would like to include numeric characters
+var numericCharacters = 
+  window.confirm("Would you like to use numeric characters?");
+
+//ask user if they would like to include special characters
+var specialCharacters =
+  window.confirm("Would you like to use special characters?");
+
+// ensure user selects at least one type of character
+if (lowerCaseCharacters === false && upperCaseCharacters === false && numericCharacters === false && specialCharacters === false) {
+  window.alert("You must select at least one character type!");
+  return;
+}
+// object to store user input
+var passwordCriteria = {
+  length: passwordLength, 
+  lowerCaseCharacters: lowerCaseCharacters, 
+  upperCaseCharacters: upperCaseCharacters, 
+  numericCharacters: numericCharacters, 
+  specialCharacters: specialCharacters
+}
+return passwordCriteria;
+}
+//function to generate password
+var generatePassword = function () {
+  var password = getPasswordCriteria()
+
+  if (specialCharacters) {}
+}
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
