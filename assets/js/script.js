@@ -57,9 +57,20 @@ return passwordCriteria;
 }
 //function to generate password
 var generatePassword = function () {
-  var password = getPasswordCriteria()
+  var criteria = getPasswordCriteria()
 
-  if (specialCharacters) {}
+  if (lowerCaseCharacters) {
+    (lowerCaseCharacters)
+  }
+  if (upperCaseCharacters) {
+   (upperCaseCharacters)
+  }
+  if (numericCharacters) {
+    (numericCharacters)
+  }
+  if (specialCharacters) {
+    (specialCharacters)
+  }
 }
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
