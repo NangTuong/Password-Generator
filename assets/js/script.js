@@ -25,6 +25,23 @@ if (passwordLength > 128) {
 }
 }
 
+//ask user if they would like to include lowercase characters
+var lowerCaseCharacters = function () {
+  window.confirm("Would you like to use lowercase characters?");
+}
+//ask user if they would like to include uppercase characters
+var upperCaseCharacters = function () {
+  window.confirm("Would you like to use uppercase characters?");
+}
+//ask user if they would like to include numeric characters
+var numericCharacters = function () {
+  window.confirm("Would you like to use numeric characters?");
+}
+//ask user if they would like to include special characters
+var numericCharacters = function () {
+  window.confirm("Would you like to use special characters?");
+}
+
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
