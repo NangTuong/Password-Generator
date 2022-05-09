@@ -1,3 +1,3 @@
 # Random-Password-Generator
 
-Tool that allows a user tonrandomly generate a password based off the criteria they select.
+Tool that allows a user to generate a random password based off the criteria they select.
